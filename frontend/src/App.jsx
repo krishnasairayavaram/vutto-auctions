@@ -831,12 +831,12 @@ export default function App() {
                 <input
                   type="password"
                   required
-                  minLength="8"
+                  minLength={mode === 'register' ? 8 : undefined}
                   value={form.password}
                   onChange={(e) =>
                     setForm({ ...form, password: e.target.value })
                   }
-                  placeholder="At least 8 characters"
+                  placeholder={mode === 'register' ? 'At least 8 characters' : 'Enter your password'}
                 />
               </label>
               <button
@@ -851,6 +851,23 @@ export default function App() {
                 <ArrowUpRight size={16} />
               </button>
             </form>
+            {notice && (
+              <div
+                className="notice"
+                role="alert"
+                aria-live="assertive"
+                style={{
+                  marginTop: '14px',
+                  background: '#fff1f0',
+                  color: '#b42318',
+                  border: '1px solid #fecdca',
+                  padding: '12px',
+                  borderRadius: '8px'
+                }}
+              >
+                {notice}
+              </div>
+            )}
             <div className="switch-auth">
               {mode === 'register'
                 ? 'Already have an account?'
