@@ -1,5 +1,12 @@
 # Vutto Auctions — Architecture
 
+## System Architecture Diagram
+
+The following diagram illustrates the high-level architecture of Vutto Auctions, including the frontend, backend services, database, authentication, real-time communication, auction lifecycle management, and image storage.
+
+![Vutto Auctions System Architecture](docs/system-architecture.png)
+
+
 ## 1. Overview
 
 Vutto Auctions is a React single-page application backed by a Node.js/Express API. MongoDB stores application data, while Socket.IO provides real-time communication between the server and connected clients.
