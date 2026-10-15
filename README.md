@@ -10,6 +10,11 @@ A web-based bike auction platform for browsing motorcycle auctions and participa
 
 > The backend is hosted on Render's free service tier, so the first request after inactivity may be slower while the service starts.
 
+## Admin Credentials
+
+- ADMIN_EMAIL=admin@example.com
+- ADMIN_PASSWORD=adminadmin2005
+
 ## Features
 
 - User registration and login with JWT-based authentication.
